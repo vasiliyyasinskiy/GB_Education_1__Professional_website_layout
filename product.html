@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Shopping cart</title>
+    <title>Products</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700i,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.min.css">
     <link rel="stylesheet" href="libs/normalize.css">
     <script src="https://kit.fontawesome.com/7fb33f2a78.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -298,6 +299,271 @@
         <div class="container new_arrivals__content">
             <h2 class="new_arrivals__h2">New Arrivals</h2>
             <h3 class="new_arrivals__h3">Home / Men / <span class="rosy_pink"><b>New Arrivals</b></span></h3>
+        </div>
+    </div>
+
+
+
+    <div class="big_product">
+        <div class="container big_product__content">
+
+            <div class="big_product__left">
+                <details open class="big_product__menu">
+                    <summary class="big_product__list">
+                        <div class="pink_left_border">Category</div>
+                    </summary>
+                    <ul class="big_product__submenu">
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Accessories</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Bags</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Denim</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Hoodies & Sweatshirts</a>
+                        </li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Jackets & Coats</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Pants</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Polos</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Shirts</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Shoes</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Shorts</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Sweaters & Knits</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">T-Shirts</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Tanks</a></li>
+                    </ul>
+                </details>
+
+                <details class="big_product__menu">
+                    <summary class="big_product__list">
+                        <div class="pink_left_border">BRAND</div>
+                    </summary>
+                    <ul class="big_product__submenu">
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Brand 1</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Brand 2</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Brand 3</a></li>
+
+                    </ul>
+                </details>
+
+                <details class="big_product__menu">
+                    <summary class="big_product__list">
+                        <div class="pink_left_border">dESIGNER</div>
+                    </summary>
+                    <ul class="big_product__submenu">
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Designer 1</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Designer 2</a></li>
+                        <li class="big_product__sublist"><a href="#" class="big_product__link">Designer 3</a></li>
+                    </ul>
+                </details>
+            </div>
+
+            <div class="big_product__right">
+                <div class="big_product___right_up">
+                    <div class="right_up__sort_up">
+                        <div class="right_up_sort_up__block">
+                            <h3 class="right_up_sort_up__block__h3">Trending now</h3>
+                            Bohemian | Floral | Lace
+                            Floral | Lace | Bohemian
+                        </div>
+                        <div class="right_up_sort_up__block">
+                            <h3 class="right_up_sort_up__block__h3">Size</h3>
+                            <label for="XXS">
+                                <input id="XXS" type="checkbox">XXS</label>
+                            <label for="XS">
+                                <input id="XS" type="checkbox">XS</label>
+                            <label for="S">
+                                <input id="S" type="checkbox">S</label>
+                            <label for="M">
+                                <input id="M" type="checkbox">M</label>
+                            <br>
+                            <label for="L">
+                                <input id="L" type="checkbox">L</label>
+                            <label for="XL">
+                                <input id="XL" type="checkbox">XL</label>
+                            <label for="XXL">
+                                <input id="XXL" type="checkbox">XXL</label>
+                        </div>
+                        <div class="right_up_sort_up__block">
+                            <h3 class="right_up_sort_up__block__h3">pRICE</h3>
+                            <form oninput="result.value=(range.value)" action="#">
+                                <input id="range" type="range" value="10" step="0.1" />
+                                <p>$
+                                    <output name="result" for="range">0</output>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="right_up__sort_down">
+                        <label for="Sort by">Sort by
+                            <select id="Sort by">
+                                <option>Name</option>
+                                <option>Newest</option>
+                                <option>Price</option>
+                                <option>Best Match</option>
+                                <option>Orders</option>
+                            </select>
+                        </label>
+
+                        <label for="Show">Show
+                            <select id="Show">
+                                <option>9</option>
+                                <option>20</option>
+                                <option>100</option>
+                                <option>All</option>
+                            </select>
+                        </label>
+
+
+                    </div>
+                </div>
+
+                <div class="big_product__right_down">
+                    <div class="product-box">
+
+                        <div class="product">
+                            <a href="#">
+                                <img class="product__img" src="img/_e_layer_43_2267.jpg" alt="photo product">
+                            </a>
+                            <div class="product__content">
+                                <a class="product__name">Mango People T-shirt</a>
+                                <p class="product__price">$52.00</p>
+                            </div>
+                            <a href="#" class="product__add">Add to Cart</a>
+                        </div>
+
+                        <div class="product">
+                            <a href="#">
+                                <img class="product__img" src="img/_e_layer_44_2268.jpg" alt="photo product">
+                            </a>
+                            <div class="product__content">
+                                <a class="product__name">Mango People T-shirt</a>
+                                <p class="product__price">$52.00</p>
+                            </div>
+                            <a href="#" class="product__add">Add to Cart</a>
+                        </div>
+
+
+                        <div class="product">
+                            <a href="#">
+                                <img class="product__img" src="img/layer-3.jpg" alt="photo product">
+                            </a>
+                            <div class="product__content">
+                                <a class="product__name">Mango People T-shirt</a>
+                                <p class="product__price">$52.00</p>
+                            </div>
+                            <a href="#" class="product__add">Add to Cart</a>
+                        </div>
+
+                        <div class="product">
+                            <a href="#">
+                                <img class="product__img" src="img/_e_layer_44_2269.jpg" alt="photo product">
+                            </a>
+                            <div class="product__content">
+                                <a class="product__name">Mango People T-shirt</a>
+                                <p class="product__price">$52.00</p>
+                            </div>
+                            <a href="#" class="product__add">Add to Cart</a>
+                        </div>
+
+                        <div class="product">
+                            <a href="#">
+                                <img class="product__img" src="img/layer-8.jpg" alt="photo product">
+                            </a>
+                            <div class="product__content">
+                                <a class="product__name">Mango People T-shirt</a>
+                                <p class="product__price">$52.00</p>
+                            </div>
+                            <a href="#" class="product__add">Add to Cart</a>
+                        </div>
+
+                        <div class="product">
+                            <a href="#">
+                                <img class="product__img" src="img/_e_layer_44_2271.jpg" alt="photo product">
+                            </a>
+                            <div class="product__content">
+                                <a class="product__name">Mango People T-shirt</a>
+                                <p class="product__price">$52.00</p>
+                            </div>
+                            <a href="#" class="product__add">Add to Cart</a>
+                        </div>
+
+                        <div class="product">
+                            <a href="#">
+                                <img class="product__img" src="img/layer-6.jpg" alt="photo product">
+                            </a>
+                            <div class="product__content">
+                                <a class="product__name">Mango People T-shirt</a>
+                                <p class="product__price">$52.00</p>
+                            </div>
+                            <a href="#" class="product__add">Add to Cart</a>
+                        </div>
+
+                        <div class="product">
+                            <a href="#">
+                                <img class="product__img" src="img/_e_layer_49_2274.jpg" alt="photo product">
+                            </a>
+                            <div class="product__content">
+                                <a class="product__name">Mango People T-shirt</a>
+                                <p class="product__price">$52.00</p>
+                            </div>
+                            <a href="#" class="product__add">Add to Cart</a>
+                        </div>
+
+                        <div class="product">
+                            <a href="#">
+                                <img class="product__img" src="img/_e_layer_44_2270.jpg" alt="photo product">
+                            </a>
+                            <div class="product__content">
+                                <a class="product__name">Mango People T-shirt</a>
+                                <p class="product__price">$52.00</p>
+                            </div>
+                            <a href="#" class="product__add">Add to Cart</a>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="big_product__right_down_pagination">
+                        <ul class="pagination">
+                            <li class="pagination_list"><a href="#" class="pagination_link">&lt;</a></li>
+                            <li class="pagination_list"><a href="#" class="pagination_link"><span class="rosy_pink">1</span></a></li>
+                            <li class="pagination_list"><a href="#" class="pagination_link">2</a></li>
+                            <li class="pagination_list"><a href="#" class="pagination_link">3</a></li>
+                            <li class="pagination_list"><a href="#" class="pagination_link">4</a></li>
+                            <li class="pagination_list"><a href="#" class="pagination_link">5</a></li>
+                            <li class="pagination_list"><a href="#" class="pagination_link">6</a></li>
+                            <li class="pagination_list"><a href="#" class="pagination_link">...</a></li>
+                            <li class="pagination_list"><a href="#" class="pagination_link">20</a></li>
+                            <li class="pagination_list"><a href="#" class="pagination_link">&gt;</a></li>
+                        </ul>
+                        <a class="button__view_all" href="#">View All</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="small_discount_banner">
+        <div class="container small_discount_banner__content">
+            <div class="small_discount_block">
+                <div class="samall_block_image"><img src="img/forma-1.svg" alt="image"></div>
+                <h3 class="small_discount_block__h3">Free Delivery</h3>
+                <p class="small_discount_block__p">Worldwide delivery on all. Authorit tively morph next-generation
+                    innov tion with extensive models.</p>
+            </div>
+
+            <div class="small_discount_block">
+                <div class="samall_block_image"><img src="img/forma-2.svg" alt="image"></div>
+                <h3 class="small_discount_block__h3">Sales & discounts</h3>
+                <p class="small_discount_block__p">Worldwide delivery on all. Authorit tively morph next-generation
+                    innov tion with extensive models.</p>
+            </div>
+
+            <div class="small_discount_block">
+                <div class="samall_block_image"><img src="img/forma-3.svg" alt="image"></div>
+                <h3 class="small_discount_block__h3">Quality assurance</h3>
+                <p class="small_discount_block__p">Worldwide delivery on all. Authorit tively morph next-generation
+                    innov tion with extensive models.</p>
+            </div>
         </div>
     </div>
 
