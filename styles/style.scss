@@ -63,11 +63,13 @@ header {
   border          : 1px solid #ececec;
   background-color: #ffffff;
 
+
   .header__content {
     height         : 100px;
     display        : flex;
     justify-content: space-between;
     align-items    : center;
+
 
     .header__left,
     .header__right,
@@ -75,6 +77,7 @@ header {
     .logo {
       display    : flex;
       align-items: center;
+
 
       .cart {
         margin-right: 26px;
@@ -84,6 +87,7 @@ header {
         &:hover {
           animation: bounce 1s;
         }
+
 
         @keyframes bounce {
 
@@ -193,101 +197,130 @@ header {
 }
 
 
-nav {
-  .nav__content {
-    .menu {
-      list-style-type: none;
-      display        : flex;
-      justify-content: center;
 
-      .menu__list {
-        position: relative;
+.menu {
+  list-style-type: none;
+  display        : flex;
+  justify-content: center;
 
-        &:hover .drop {
-          display: flex;
-        }
+  .menu__list {
+    position: relative;
 
-        .drop {
-          position        : absolute;
-          display         : none;
-          border-radius   : 5px;
-          background-color: #ffffff;
-          padding         : 0 0 20px;
-          border          : 1px solid #ececec;
-          top             : 48px;
-          z-index         : 100;
-        }
-
-        .drop_last {
-          right: 0;
-        }
-
-        .drop_last:before {
-          right: 50px;
-          left : auto !important;
-        }
-
-        .drop:before {
-
-          content         : '';
-          width           : 12px;
-          height          : 12px;
-          background-color: #fff;
-          display         : block;
-          position        : absolute;
-          left            : 29px;
-          top             : -8px;
-          transform       : rotate(45deg);
-          border-top      : 1px solid #e8e8e8;
-          border-left     : 1px solid #e8e8e8;
-        }
-
-        .drop__link {
-          color         : #646464;
-          font-size     : 14px;
-          font-weight   : 400;
-          line-height   : 28px;
-          letter-spacing: 0.35px;
-        }
-
-        .drop__ul {
-          list-style-type: none;
-        }
-
-        .drop__flex {
-          width       : 235px;
-          margin-right: 20px;
-          margin-left : 20px;
-        }
-
-        .drop__h3 {
-          border-bottom : 1px solid #e8e8e8;
-          color         : #232323;
-          font-size     : 14px;
-          font-weight   : 400;
-          text-transform: uppercase;
-          padding-bottom: 8px;
-          margin-bottom : 8px;
-          margin-top    : 20px;
-          letter-spacing: 0.35px;
-        }
-
-      }
-
-      .menu__link {
-        display       : block;
-        padding       : 20px;
-        color         : #222222;
-        font-size     : 14px;
-        font-weight   : 700;
-        text-transform: uppercase;
-
-        &:hover {
-          color: #f16d7f;
-        }
-      }
+    &:hover .drop {
+      display: flex;
     }
   }
+
+  .menu__link {
+    display       : block;
+    padding       : 20px;
+    color         : #222222;
+    font-size     : 14px;
+    font-weight   : 700;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #f16d7f;
+    }
+  }
+}
+
+
+.menu_cart {
+  list-style-type: none;
+
+  .menu_cart__list {
+    position   : relative;
+    height     : 50px;
+    display    : flex;
+    align-items: center;
+
+    &:hover .drop {
+      display       : flex;
+      flex-direction: column;
+    }
+  }
+
+  .menu_cart__link {
+    display: block;
+  }
+}
+
+
+
+
+.drop {
+  position        : absolute;
+  display         : none;
+  border-radius   : 5px;
+  background-color: #ffffff;
+  padding         : 0 0 20px;
+  border          : 1px solid #ececec;
+  top             : 48px;
+  z-index         : 100;
+}
+
+// .drop_cart {
+//   right: 0;
+// }
+
+.drop_cart:before {
+  left: 10px !important;
+}
+
+
+.drop_last {
+  right: 0;
+}
+
+.drop_last:before {
+  left: 50px;
+  left: auto !important;
+}
+
+.drop:before {
+
+  content         : '';
+  width           : 12px;
+  height          : 12px;
+  background-color: #fff;
+  display         : block;
+  position        : absolute;
+  left            : 29px;
+  top             : -8px;
+  transform       : rotate(45deg);
+  border-top      : 1px solid #e8e8e8;
+  border-left     : 1px solid #e8e8e8;
+}
+
+.drop__link {
+  color         : #646464;
+  font-size     : 14px;
+  font-weight   : 400;
+  line-height   : 28px;
+  letter-spacing: 0.35px;
+}
+
+.drop__ul {
+  list-style-type: none;
+}
+
+.drop__flex {
+  width       : 235px;
+  margin-right: 20px;
+  margin-left : 20px;
+}
+
+.drop__h3 {
+  border-bottom : 1px solid #e8e8e8;
+  color         : #232323;
+  font-size     : 14px;
+  font-weight   : 400;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  margin-bottom : 8px;
+  margin-top    : 20px;
+  letter-spacing: 0.35px;
 }
 
 
@@ -508,8 +541,14 @@ nav {
     flex-direction : column;
 
     .discounts__list {
-      font-size: 0;
-      position : relative;
+      font-size : 0;
+      position  : relative;
+      transition: all 0.1s linear;
+
+      &:hover {
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.10);
+        transform : scale(1.01);
+      }
 
       .discounts__badge {
         padding         : 16px 20px 16px 20px;
@@ -836,7 +875,7 @@ nav {
             list-style-type: none;
             justify-content: space-evenly;
             align-items    : center;
-            border-radius: 3px;
+            border-radius  : 3px;
 
             .pagination_list {
               list-style: none;
@@ -850,10 +889,8 @@ nav {
                 &:hover {
                   color: #ef5b70;
                 }
-
               }
             }
-
           }
 
           .button__view_all {
@@ -901,9 +938,11 @@ nav {
     width        : 261px;
     position     : relative;
     margin-bottom: 39px;
+    transition   : all 0.2s linear;
 
     &:hover {
       box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+      transform : scale(1.01);
     }
 
     &:hover .product__img {
@@ -1503,6 +1542,7 @@ nav {
             font-size                 : 14px;
             letter-spacing            : 0.35px;
             color                     : #ffffff;
+            transition                : all 0.1s linear;
 
             &:hover {
               background-color: rgb(231, 98, 116);

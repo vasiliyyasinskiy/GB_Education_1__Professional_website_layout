@@ -214,21 +214,54 @@ header .header__content .logo .button__my_account__link:hover {
   outline: #f16d7f solid 3px;
 }
 
-nav .nav__content .menu {
+.menu {
   list-style-type: none;
   display: flex;
   justify-content: center;
 }
 
-nav .nav__content .menu .menu__list {
+.menu .menu__list {
   position: relative;
 }
 
-nav .nav__content .menu .menu__list:hover .drop {
+.menu .menu__list:hover .drop {
   display: flex;
 }
 
-nav .nav__content .menu .menu__list .drop {
+.menu .menu__link {
+  display: block;
+  padding: 20px;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu .menu__link:hover {
+  color: #f16d7f;
+}
+
+.menu_cart {
+  list-style-type: none;
+}
+
+.menu_cart .menu_cart__list {
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.menu_cart .menu_cart__list:hover .drop {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_cart .menu_cart__link {
+  display: block;
+}
+
+.drop {
   position: absolute;
   display: none;
   border-radius: 5px;
@@ -239,16 +272,20 @@ nav .nav__content .menu .menu__list .drop {
   z-index: 100;
 }
 
-nav .nav__content .menu .menu__list .drop_last {
+.drop_cart:before {
+  left: 10px !important;
+}
+
+.drop_last {
   right: 0;
 }
 
-nav .nav__content .menu .menu__list .drop_last:before {
-  right: 50px;
+.drop_last:before {
+  left: 50px;
   left: auto !important;
 }
 
-nav .nav__content .menu .menu__list .drop:before {
+.drop:before {
   content: '';
   width: 12px;
   height: 12px;
@@ -262,7 +299,7 @@ nav .nav__content .menu .menu__list .drop:before {
   border-left: 1px solid #e8e8e8;
 }
 
-nav .nav__content .menu .menu__list .drop__link {
+.drop__link {
   color: #646464;
   font-size: 14px;
   font-weight: 400;
@@ -270,17 +307,17 @@ nav .nav__content .menu .menu__list .drop__link {
   letter-spacing: 0.35px;
 }
 
-nav .nav__content .menu .menu__list .drop__ul {
+.drop__ul {
   list-style-type: none;
 }
 
-nav .nav__content .menu .menu__list .drop__flex {
+.drop__flex {
   width: 235px;
   margin-right: 20px;
   margin-left: 20px;
 }
 
-nav .nav__content .menu .menu__list .drop__h3 {
+.drop__h3 {
   border-bottom: 1px solid #e8e8e8;
   color: #232323;
   font-size: 14px;
@@ -290,19 +327,6 @@ nav .nav__content .menu .menu__list .drop__h3 {
   margin-bottom: 8px;
   margin-top: 20px;
   letter-spacing: 0.35px;
-}
-
-nav .nav__content .menu .menu__link {
-  display: block;
-  padding: 20px;
-  color: #222222;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-nav .nav__content .menu .menu__link:hover {
-  color: #f16d7f;
 }
 
 .promo {
@@ -513,6 +537,12 @@ nav .nav__content .menu .menu__link:hover {
 .discounts .discounts__content .discounts__list {
   font-size: 0;
   position: relative;
+  transition: all 0.1s linear;
+}
+
+.discounts .discounts__content .discounts__list:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
 }
 
 .discounts .discounts__content .discounts__list .discounts__badge {
@@ -873,10 +903,12 @@ nav .nav__content .menu .menu__link:hover {
   width: 261px;
   position: relative;
   margin-bottom: 39px;
+  transition: all 0.2s linear;
 }
 
 .product-box .product:hover {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  transform: scale(1.01);
 }
 
 .product-box .product:hover .product__img {
@@ -1445,6 +1477,7 @@ nav .nav__content .menu .menu__link:hover {
   font-size: 14px;
   letter-spacing: 0.35px;
   color: #ffffff;
+  transition: all 0.1s linear;
 }
 
 .subscribe .subscribe__content .subscribe__text .subscribe__right .subscribe__email .button__subscribe:hover {
