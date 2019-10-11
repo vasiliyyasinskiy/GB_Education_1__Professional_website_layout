@@ -81,6 +81,8 @@ header .header__content .logo .cart {
   margin-right: 26px;
   display: flex;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 header .header__content .header__left .cart:hover,
@@ -122,6 +124,7 @@ header .header__content .logo .header__form .browse__link {
   color: #222222;
   background-image: linear-gradient(to bottom, #f9f9f9, #f5f5f5);
   border: solid 1px #e6e6e6;
+  border-right: none;
   text-decoration: none;
   display: block;
   text-align: center;
@@ -144,14 +147,43 @@ header .header__content .logo .header__form .search {
   height: 38px;
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
+  position: relative;
+}
+
+header .header__content .header__left .header__form .search #search_button,
+header .header__content .header__right .header__form .search #search_button,
+header .header__content .header__form .header__form .search #search_button,
+header .header__content .logo .header__form .search #search_button {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+header .header__content .header__left .header__form .search #search_button .fa-search,
+header .header__content .header__right .header__form .search #search_button .fa-search,
+header .header__content .header__form .header__form .search #search_button .fa-search,
+header .header__content .logo .header__form .search #search_button .fa-search {
+  font-size: 14px;
+  line-height: 36px;
+  color: #a4a4a4;
+}
+
+header .header__content .header__left .header__form .search #search_button .fa-search:hover,
+header .header__content .header__right .header__form .search #search_button .fa-search:hover,
+header .header__content .header__form .header__form .search #search_button .fa-search:hover,
+header .header__content .logo .header__form .search #search_button .fa-search:hover {
+  color: #838383;
 }
 
 header .header__content .header__left .header__form .search input[type="text"],
 header .header__content .header__right .header__form .search input[type="text"],
 header .header__content .header__form .header__form .search input[type="text"],
 header .header__content .logo .header__form .search input[type="text"] {
-  width: 259px;
-  height: 37px;
+  width: 264px;
+  height: 38px;
   border: 0;
   padding-left: 16px;
   font-size: 14px;
@@ -159,6 +191,7 @@ header .header__content .logo .header__form .search input[type="text"] {
   line-height: 32px;
   letter-spacing: 0.35px;
   color: #a4a4a4;
+  border-right: 1px solid #e6e6e6;
 }
 
 header .header__content .header__left .header__form .search input[type="text"]:focus,
@@ -192,17 +225,17 @@ header .header__content .header__right .button__my_account__link,
 header .header__content .header__form .button__my_account__link,
 header .header__content .logo .button__my_account__link {
   background-color: #f16d7f;
-  width: 130px;
-  height: 38px;
+  width: 127px;
+  height: 35px;
   text-decoration: none;
   display: block;
   text-align: center;
-  line-height: 38px;
+  line-height: 35px;
   font-size: 15px;
   letter-spacing: 0.38px;
   padding-left: 9px;
   color: #ffffff;
-  transition: all 0.2s linear;
+  border: #f16d7f solid 3px;
 }
 
 header .header__content .header__left .button__my_account__link:hover,
@@ -211,7 +244,7 @@ header .header__content .header__form .button__my_account__link:hover,
 header .header__content .logo .button__my_account__link:hover {
   background-color: #ffffff;
   color: #222222;
-  outline: #f16d7f solid 3px;
+  border: #f16d7f solid 3px;
 }
 
 .menu {
@@ -226,6 +259,16 @@ header .header__content .logo .button__my_account__link:hover {
 
 .menu .menu__list:hover .drop {
   display: flex;
+}
+
+.menu .menu__list_browse {
+  position: relative;
+  height: 40px;
+}
+
+.menu .menu__list_browse:hover .drop {
+  display: flex;
+  flex-direction: column;
 }
 
 .menu .menu__link {
@@ -247,7 +290,7 @@ header .header__content .logo .button__my_account__link:hover {
 
 .menu_cart .menu_cart__list {
   position: relative;
-  height: 50px;
+  height: 68px;
   display: flex;
   align-items: center;
 }
@@ -272,19 +315,6 @@ header .header__content .logo .button__my_account__link:hover {
   z-index: 100;
 }
 
-.drop_cart:before {
-  left: 10px !important;
-}
-
-.drop_last {
-  right: 0;
-}
-
-.drop_last:before {
-  left: 50px;
-  left: auto !important;
-}
-
 .drop:before {
   content: '';
   width: 12px;
@@ -299,25 +329,39 @@ header .header__content .logo .button__my_account__link:hover {
   border-left: 1px solid #e8e8e8;
 }
 
-.drop__link {
-  color: #646464;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0.35px;
+.drop_cart {
+  top: 68px;
+  left: -14px;
 }
 
-.drop__ul {
-  list-style-type: none;
+.drop_cart:before {
+  left: 25px !important;
 }
 
-.drop__flex {
-  width: 235px;
+.drop_browse {
+  top: 40px;
+  left: 0px;
+}
+
+.drop_browse:before {
+  left: 62px !important;
+}
+
+.drop_last {
+  right: 0;
+}
+
+.drop_last:before {
+  right: 50px;
+  left: auto !important;
+}
+
+.drop .drop__flex {
   margin-right: 20px;
   margin-left: 20px;
 }
 
-.drop__h3 {
+.drop .drop__flex .drop__h3 {
   border-bottom: 1px solid #e8e8e8;
   color: #232323;
   font-size: 14px;
@@ -327,6 +371,113 @@ header .header__content .logo .button__my_account__link:hover {
   margin-bottom: 8px;
   margin-top: 20px;
   letter-spacing: 0.35px;
+}
+
+.drop .drop__flex .drop__ul {
+  list-style-type: none;
+  width: 235px;
+}
+
+.drop .drop__flex .drop__ul .drop__link {
+  color: #646464;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.35px;
+}
+
+.drop .drop__flex .drop__ul .drop__link:hover {
+  color: #f16d7f;
+}
+
+.drop_cart__menu {
+  width: 230px;
+  text-transform: uppercase;
+  margin-top: 21px;
+}
+
+.drop_cart__menu .drop_cart__menu_list {
+  list-style: none;
+}
+
+.drop_cart__menu .drop_cart__menu_list .drop_cart__menu_link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ededed;
+  transition: transform 0.1s linear;
+}
+
+.drop_cart__menu .drop_cart__menu_list .drop_cart__menu_link:hover {
+  transform: scale(1.02);
+}
+
+.drop_cart__menu .drop_cart__menu_list .drop_cart__menu_link .drop_cart__text {
+  align-self: flex-start;
+}
+
+.drop_cart__menu .drop_cart__menu_list .drop_cart__menu_link .drop_cart__text .drop_cart__h3 {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.drop_cart__menu .drop_cart__menu_list .drop_cart__menu_link .drop_cart__text .drop_cart__p {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #f16d7f;
+}
+
+.drop_cart__menu .drop_cart__menu_list .drop_cart__menu_link .drop_cart__text .fa-star,
+.drop_cart__menu .drop_cart__menu_list .drop_cart__menu_link .drop_cart__text .fa-star-half-alt {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: right;
+  color: #e4af48;
+}
+
+.drop_cart__menu .drop_cart__menu_list .drop_cart__menu_link .fa-times-circle {
+  font-size: 16px;
+  text-align: right;
+  color: #c0c0c0;
+}
+
+.drop_cart__menu .drop_cart__menu_list .drop_cart__menu_link .fa-times-circle:hover {
+  color: #838383;
+}
+
+.drop_cart__menu .drop_cart_total__p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222222;
+  text-align: justify;
+  margin-top: 19px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drop_cart__menu .drop_cart__button {
+  margin: 11px auto 0px;
+  width: 225px;
+  height: 50px;
+  object-fit: contain;
+  font-size: 14px;
+  font-weight: bold;
+  border: solid 1px #eaeaea;
+  color: #4a4a4a;
+  text-align: center;
+  display: block;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.drop_cart__menu .drop_cart__button:hover {
+  border: solid 1px #f16d7f;
+  color: #f16d7f;
 }
 
 .promo {
@@ -351,11 +502,14 @@ header .header__content .logo .button__my_account__link:hover {
 .promo .promo__container .promo__text .promo__h2 {
   font-size: 60px;
   letter-spacing: 1.5px;
+  line-height: 43px;
+  margin-bottom: 19px;
 }
 
 .promo .promo__container .promo__text .promo__h3 {
   font-size: 40px;
   letter-spacing: 1px;
+  line-height: 30px;
 }
 
 .slider__single_page {
@@ -468,25 +622,26 @@ header .header__content .logo .button__my_account__link:hover {
 }
 
 .holder .add_to_cart__content .add_to_cart__text .add_to_cart__form .add_to_cart__choose .choose__block select:focus {
-  outline: black 1px solid;
+  outline: none;
 }
 
 .holder .add_to_cart__content .add_to_cart__text .add_to_cart__form .add_to_cart__button {
   display: block;
   width: 537px;
   height: 55px;
-  border: solid 1px #ef5b70;
   background-color: #ffffff;
   font-size: 16px;
   line-height: 55px;
   text-align: center;
   font-weight: bold;
   color: #ef5b70;
+  border: solid 1px #ef5b70;
 }
 
 .holder .add_to_cart__content .add_to_cart__text .add_to_cart__form .add_to_cart__button:hover {
-  border: solid 1px #eb354d;
-  color: #eb354d;
+  background-color: #ef5b70;
+  border: solid 1px #ef5b70;
+  color: #ffffff;
 }
 
 .new_arrivals {
@@ -537,7 +692,8 @@ header .header__content .logo .button__my_account__link:hover {
 .discounts .discounts__content .discounts__list {
   font-size: 0;
   position: relative;
-  transition: all 0.1s linear;
+  transition: 0.1s linear;
+  transition-property: transform, box-shadow;
 }
 
 .discounts .discounts__content .discounts__list:hover {
@@ -625,6 +781,7 @@ header .header__content .logo .button__my_account__link:hover {
 
 .checkout_details .checkout_menu .checkout_list .checkout_list__form input[type=submit]:hover {
   color: #f16d7f;
+  border: solid 1px #f16d7f;
 }
 
 .checkout_details .checkout_menu .checkout_list .checkout_list__form .checkout__forms {
@@ -721,6 +878,7 @@ header .header__content .logo .button__my_account__link:hover {
 }
 
 .big_product .big_product__content .big_product__left .big_product__menu .big_product__list .pink_left_border {
+  display: block;
   border-left: 5px solid #ef5b70;
   height: 37px;
   padding-left: 11px;
@@ -882,7 +1040,6 @@ header .header__content .logo .button__my_account__link:hover {
   line-height: 44px;
   text-align: center;
   color: #ef5b70;
-  transition: all 0.1s linear;
 }
 
 .big_product .big_product__content .big_product__right .big_product__right_down .big_product__right_down_pagination .button__view_all:hover {
@@ -903,7 +1060,8 @@ header .header__content .logo .button__my_account__link:hover {
   width: 261px;
   position: relative;
   margin-bottom: 39px;
-  transition: all 0.2s linear;
+  transition: 0.2s linear;
+  transition-property: transform, box-shadow;
 }
 
 .product-box .product:hover {
@@ -936,7 +1094,7 @@ header .header__content .logo .button__my_account__link:hover {
   top: 98px;
   left: 70px;
   text-align: center;
-  transition: all 0.2s linear;
+  transition: box-shadow 0.2s linear;
 }
 
 .product-box .product .product__add:hover {
@@ -979,7 +1137,8 @@ header .header__content .logo .button__my_account__link:hover {
 
 .button__rosy_pink__link {
   background-color: #f16d7f;
-  width: 212px;
+  border: #f16d7f solid 3px;
+  width: 209px;
   height: 48px;
   margin: 0 auto;
   text-decoration: none;
@@ -990,13 +1149,12 @@ header .header__content .logo .button__my_account__link:hover {
   font-weight: bold;
   letter-spacing: 0.4px;
   color: #ffffff;
-  transition: all 0.1s linear;
 }
 
 .button__rosy_pink__link:hover {
   background-color: #ffffff;
   color: #222222;
-  outline: #f16d7f solid 3px;
+  border: #f16d7f solid 3px;
 }
 
 .shipping_cart .shipping_cart__content {
@@ -1029,6 +1187,11 @@ header .header__content .logo .button__my_account__link:hover {
   display: flex;
   align-items: center;
   text-align: center;
+  transition: transform 0.2s linear;
+}
+
+.shipping_cart .shipping_cart__content .shipping_cart__products .shopping_cart__products__list:hover {
+  transform: scale(1.01);
 }
 
 .shipping_cart .shipping_cart__content .shipping_cart__products .producy_detail__block {
@@ -1120,6 +1283,7 @@ header .header__content .logo .button__my_account__link:hover {
 .shipping_cart .shipping_cart__content .shipping_cart__buttons .shipping_cart__button:hover {
   color: white;
   background-color: #f16d7f;
+  border: 1px solid #f16d7f;
 }
 
 .shipping_cart .shipping_cart__content .shipping_cart__bottom_block {
@@ -1142,6 +1306,7 @@ header .header__content .logo .button__my_account__link:hover {
 .shipping_cart .shipping_cart__content .shipping_cart__bottom_block .shipping_cart__white_bottom:hover {
   color: white;
   background-color: #f16d7f;
+  border: 1px solid #f16d7f;
 }
 
 .shipping_cart .shipping_cart__content .shipping_cart__bottom_block input[type="text"] {
@@ -1214,19 +1379,19 @@ header .header__content .logo .button__my_account__link:hover {
 .shipping_cart .shipping_cart__content .shipping_cart__bottom_block .total__block .total_block__content .preceed_to_checkout__button {
   display: inline-block;
   text-align: center;
-  padding: 19px 42px;
+  padding: 16px 39px;
   background-color: #f16d7f;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  transition: all 0.1s linear;
+  border: #f16d7f solid 3px;
 }
 
 .shipping_cart .shipping_cart__content .shipping_cart__bottom_block .total__block .total_block__content .preceed_to_checkout__button:hover {
   background-color: #ffffff;
   color: #222222;
-  outline: #f16d7f solid 3px;
+  border: #f16d7f solid 3px;
 }
 
 .small_discount_banner {
@@ -1477,7 +1642,6 @@ header .header__content .logo .button__my_account__link:hover {
   font-size: 14px;
   letter-spacing: 0.35px;
   color: #ffffff;
-  transition: all 0.1s linear;
 }
 
 .subscribe .subscribe__content .subscribe__text .subscribe__right .subscribe__email .button__subscribe:hover {
@@ -1573,11 +1737,11 @@ footer .footer__down .footer_down__content .social_links .social_list {
   margin-left: 7px;
 }
 
-footer .footer__down .footer_down__content .social_links .social_list i:active {
+footer .footer__down .footer_down__content .social_links .social_list .fab:active {
   opacity: 0.3;
 }
 
-footer .footer__down .footer_down__content .social_links .social_list i {
+footer .footer__down .footer_down__content .social_links .social_list .fab {
   font-size: 16px;
   color: #b2b2b2;
   width: 32px;
@@ -1588,7 +1752,7 @@ footer .footer__down .footer_down__content .social_links .social_list i {
   justify-content: center;
 }
 
-footer .footer__down .footer_down__content .social_links .social_list i:hover {
+footer .footer__down .footer_down__content .social_links .social_list .fab:hover {
   color: white;
   background-color: #f16d7f;
 }
