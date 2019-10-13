@@ -380,7 +380,7 @@ header .header__content .logo .button__my_account__link:hover {
 
 .drop .drop__flex .drop__ul .drop__link {
   color: #646464;
-  font-size: 14px;
+  font-size: 14 px;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.35px;
