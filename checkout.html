@@ -20,27 +20,90 @@
                 <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
                         class="rosy_pink super_bold">D</span></a>
                 <form class="header__form" action="#">
-                    <a class="browse__link" href="#">Browse &#9660;</a>
+                    <ul class="menu">
+                        <li class="menu__list_browse"><a class="browse__link" href="#">Browse &#9660;</a>
+                            <div class="drop drop_browse">
+                                <div class="drop__flex">
+                                    <h3 class="drop__h3">Women</h3>
+                                    <ul class="drop__ul">
+                                        <li><a href="#" class="drop__link">Dresses</a></li>
+                                        <li><a href="#" class="drop__link">Tops</a></li>
+                                        <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
+                                        <li><a href="#" class="drop__link">Jackets/Coats</a></li>
+                                        <li><a href="#" class="drop__link">Blazers</a></li>
+                                        <li><a href="#" class="drop__link">Denim</a></li>
+                                        <li><a href="#" class="drop__link">Leggings/Pants</a></li>
+                                        <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
+                                        <li><a href="#" class="drop__link">Accessories </a></li>
+                                    </ul>
+                                </div>
+                                <div class="drop__flex">
+                                    <h3 class="drop__h3">Women</h3>
+                                    <ul class="drop__ul">
+                                        <li><a href="#" class="drop__link">Dresses</a></li>
+                                        <li><a href="#" class="drop__link">Tops</a></li>
+                                        <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
+                                        <li><a href="#" class="drop__link">Jackets/Coats</a></li>
+                                        <li><a href="#" class="drop__link">Blazers</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </ul>
+
+
                     <div class="search">
-                        <input type="text" placeholder="Search for Item...">
-                        <a href="#"><button><img src="img/search.png" alt="image"></button></a>
+                        <input type="text" placeholder="Search for Item..."><button id="search_button"><i
+                                class="fas fa-search"></i></button>
                     </div>
                 </form>
             </div>
             <div class="header__right">
 
                 <ul class="menu_cart">
-                    <li class="menu_cart__list"><a href="#" title="index.html" class="menu__link"><img class="cart"
+                    <li class="menu_cart__list"><a href="shopping_cart.html" class="menu_cart__link"><img class="cart"
                                 src="img/cart.svg" alt="cart"></a>
                         <div class="drop_cart drop">
                             <div class="drop__flex">
-                                <h3 class="drop__h3">Links</h3>
-                                <ul class="drop__ul">
-                                    <li><a href="index.html" class="drop__link">index.html</a></li>
-                                    <li><a href="checkout.html" class="drop__link">checkout.html</a></li>
-                                    <li><a href="product.html" class="drop__link">product.html</a></li>
-                                    <li><a href="shopping_cart.html" class="drop__link">shopping_cart.html</a></li>
-                                    <li><a href="single_page.html" class="drop__link">single_page.html</a></li>
+                                <ul class="drop_cart__menu">
+                                    <li class="drop_cart__menu_list">
+                                        <a class="drop_cart__menu_link" href="single_page.html">
+                                            <img src="img/layer-45.jpg" alt="image">
+                                            <div class="drop_cart__text">
+                                                <h3 class="drop_cart__h3">Rebox Zane</h3>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <i class="far fa-star"></i>
+
+                                                <p class="drop_cart__p">1 x $250</p>
+                                            </div>
+                                            <i class="fas fa-times-circle"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="drop_cart__menu_list">
+                                        <a class="drop_cart__menu_link" href="single_page.html">
+                                            <img src="img/layer-44.jpg" alt="image">
+                                            <div class="drop_cart__text">
+                                                <h3 class="drop_cart__h3">Rebox Zane</h3>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <i class="far fa-star"></i>
+
+                                                <p class="drop_cart__p">1 x $250</p>
+                                            </div>
+                                            <i class="fas fa-times-circle"></i>
+                                        </a>
+                                    </li>
+                                    <li class="drop_cart__menu_list">
+                                        <p class="drop_cart_total__p"><span>TOTAL</span><span>$500.00</span></p>
+
+                                        <a class="drop_cart__button" href="checkout.html">Checkout</a>
+                                        <a class="drop_cart__button" href="shopping_cart.html">Go to cart</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -55,7 +118,7 @@
     <nav>
         <div class="container nav__content">
             <ul class="menu">
-                <li class="menu__list"><a href="index.html" title="index.html" class="menu__link">Home</a>
+                <li class="menu__list"><a href="index.html" class="menu__link">Home</a>
                     <div class="drop">
                         <div class="drop__flex">
                             <h3 class="drop__h3">Women</h3>
@@ -87,7 +150,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu__list"><a href="product.html" title="product.html" class="menu__link">Man</a>
+                <li class="menu__list"><a href="product.html" class="menu__link">Man</a>
                     <div class="drop">
                         <div class="drop__flex">
                             <h3 class="drop__h3">Women</h3>
@@ -119,7 +182,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu__list"><a href="checkout.html" title="checkout.html" class="menu__link">Women</a>
+                <li class="menu__list"><a href="#" class="menu__link">Women</a>
                     <div class="drop">
                         <div class="drop__flex">
                             <h3 class="drop__h3">Women</h3>
@@ -151,7 +214,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu__list"><a href="single_page.html" title="single_page.html" class="menu__link">Kids</a>
+                <li class="menu__list"><a href="#" class="menu__link">Kids</a>
                     <div class="drop">
                         <div class="drop__flex">
                             <h3 class="drop__h3">Women</h3>
@@ -183,8 +246,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu__list"><a href="shopping_cart.html" title="shopping_cart.html"
-                        class="menu__link">Accoseriese</a>
+                <li class="menu__list"><a href="#" class="menu__link">Accoseriese</a>
                     <div class="drop">
                         <div class="drop__flex">
                             <h3 class="drop__h3">Women</h3>
@@ -350,9 +412,9 @@
                                 <p class="checkout__p">Please log in below</p>
                                 <br>
                                 <h3 class="checkout__h3">EMAIL ADDRESS <span class="red">*</span></h3>
-                                <input type="text" name="" id="">
+                                <input type="text">
                                 <h3 class="checkout__h3">PASSWORD <span class="red">*</span></h3>
-                                <input type="text" name="" id="">
+                                <input type="text">
                                 <br>
                                 <br>
                                 <p class="checkout__p"><span class="red">* Required Fileds</span></p>
@@ -402,7 +464,7 @@
                     <p class="subscribe_right__p">FOR OUR NEWLETTER AND PROMOTION</p>
 
                     <form class="subscribe__email">
-                        <input type="email" name="" id="" placeholder="Enter Your Email">
+                        <input type="email" placeholder="Enter Your Email">
                         <input type="submit" class="button__subscribe" value="Subscribe">
                     </form>
                 </div>
@@ -415,7 +477,7 @@
         <div class="container footer__up">
             <div class="footer_up__content">
                 <div class="footer__brend">
-                    <a class="logo" href="#">
+                    <a class="logo" href="index.html">
                         <div class="vertical__align"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
                                 class="rosy_pink super_bold">D</span></div>
                     </a>
@@ -436,7 +498,7 @@
                 <div class="footer__company">
                     <h2 class="footer__h2">COMPANY</h2>
                     <ul>
-                        <li class="footer__list"><a class="footer__link" href="#">Home </a></li>
+                        <li class="footer__list"><a class="footer__link" href="index.html">Home </a></li>
                         <li class="footer__list"><a class="footer__link" href="#">Shop</a></li>
                         <li class="footer__list"><a class="footer__link" href="#">About</a></li>
                         <li class="footer__list"><a class="footer__link" href="#">How It Works</a></li>
@@ -456,7 +518,7 @@
                 <div class="footer__shop_category">
                     <h2 class="footer__h2">SHOP CATEGORY</h2>
                     <ul>
-                        <li class="footer__list"><a class="footer__link" href="#">Men</a></li>
+                        <li class="footer__list"><a class="footer__link" href="product.html">Men</a></li>
                         <li class="footer__list"><a class="footer__link" href="#">Women</a></li>
                         <li class="footer__list"><a class="footer__link" href="#">Child</a></li>
                         <li class="footer__list"><a class="footer__link" href="#">Apparel</a></li>
