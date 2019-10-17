@@ -6,7 +6,7 @@
     <title>Checkout</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700i,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="libs/normalize.css">
     <link rel="stylesheet" href="libs/fontawesome-free-5.11.2-web/css/all.min.css">
 
@@ -14,14 +14,16 @@
 
 <body>
 
-    <header>
+    <header class="header">
         <div class="container header__content">
             <div class="header__left">
                 <a class="logo" href="index.html"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span
                         class="rosy_pink super_bold">D</span></a>
-                <form class="header__form" action="#">
+
+                <div class="search">
+
                     <ul class="menu">
-                        <li class="menu__list_browse"><a class="browse__link" href="#">Browse &#9660;</a>
+                        <li class="menu__list_browse"><a class="browse_botton" href="#">Browse &#9660;</a>
                             <div class="drop drop_browse">
                                 <div class="drop__flex">
                                     <h3 class="drop__h3">Women</h3>
@@ -50,17 +52,17 @@
                             </div>
                     </ul>
 
+                    <form class="search__form" action="#">
+                        <input id="search_input" type="text" placeholder="Search for Item..."><button
+                            id="search_button"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
 
-                    <div class="search">
-                        <input type="text" placeholder="Search for Item..."><button id="search_button"><i
-                                class="fas fa-search"></i></button>
-                    </div>
-                </form>
             </div>
             <div class="header__right">
 
                 <ul class="menu_cart">
-                    <li class="menu_cart__list"><a href="shopping_cart.html" class="menu__link"><img class="cart"
+                    <li class="menu_cart__list"><a href="shopping_cart.html" class="menu_cart__link"><img class="cart"
                                 src="img/cart.svg" alt="cart"></a>
                         <div class="drop_cart drop">
                             <div class="drop__flex">
