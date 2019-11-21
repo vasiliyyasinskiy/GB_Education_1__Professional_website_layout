@@ -36,6 +36,7 @@ let basket = {
         //этих методов и нам надо явно обратиться к нашему объекту корзины
         basket.removeProduct(event);
         basket.renderTotalSum();
+        basket.insertEmpty();
     },
 
     /**
@@ -94,8 +95,12 @@ let basket = {
                 <td><i class="fas fa-trash-alt productRemoveBtn" data-id="${product.id}"></i></td>
             </tr>
         `;
+
+
         let tbody = document.querySelector('tbody');
         tbody.insertAdjacentHTML("beforeend", productRow);
+
+
     },
 
     /**
@@ -107,6 +112,8 @@ let basket = {
         for (let key in this.products) {
             sum += this.products[key].price * this.products[key].count;
         }
+
+
         return sum;
     },
 
@@ -127,12 +134,11 @@ let basket = {
         }
     },
 
-
-
     insertEmpty() {
-        if (this.length == 0) {
-            let tbody = document.querySelector('tbody');
-            tbody.innerHTML = `
+        let tbody = document.querySelector('tbody').children;
+        if (tbody.length == 1) {
+
+            tbody[0].innerHTML = `
             <tr>
                 <td colspan="5"><span class="empty">Empty</span></td>
             </tr>
@@ -167,7 +173,7 @@ let basket = {
             this.products[id].count--;
         }
 
-        
-       
+
+
     }
 }
