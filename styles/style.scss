@@ -491,7 +491,7 @@ a {
 
 .drop_cart__button {
   margin        : 11px auto 0;
-  width         : 250px;
+  width         : 225px;
   height        : 50px;
   object-fit    : contain;
   font-size     : 14px;
@@ -1164,27 +1164,22 @@ a {
   }
 
   &__add {
-    color           : #ffffff;
-    background-color: Transparent;
-    font-size       : 13px;
-    font-weight     : 700;
-    width           : 123px;
-    height          : 39px;
-    line-height     : 39px;
-    display         : none;
-    border          : 1px solid #ffffff;
-    position        : absolute;
-    top             : 98px;
-    left            : 70px;
-    text-align      : center;
-    transition      : box-shadow 0.2s linear;
+    color      : #ffffff;
+    font-size  : 13px;
+    font-weight: 700;
+    width      : 123px;
+    height     : 39px;
+    line-height: 39px;
+    display    : none;
+    border     : 1px solid #ffffff;
+    position   : absolute;
+    top        : 98px;
+    left       : 70px;
+    text-align : center;
+    transition : box-shadow 0.2s linear;
 
     &:hover {
       box-shadow: 0 0 5px #fff;
-    }
-
-    &:focus {
-      outline: none;
     }
   }
 
