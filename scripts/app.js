@@ -172,8 +172,5 @@ let basket = {
         } else {
             this.products[id].count--;
         }
-
-
-
     }
 }

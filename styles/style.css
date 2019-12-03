@@ -444,6 +444,10 @@ a {
   letter-spacing: 0.35px;
 }
 
+.small_img {
+  width: 26%;
+}
+
 .drop__ul {
   list-style-type: none;
   width: 235px;
@@ -461,6 +465,14 @@ a {
   color: #f16d7f;
 }
 
+.hidden_id {
+  display: none;
+}
+
+.empty {
+  text-align: center;
+}
+
 .drop_cart__menu {
   width: 230px;
   text-transform: uppercase;
@@ -469,18 +481,15 @@ a {
 
 .drop_cart__menu_list {
   list-style: none;
-}
-
-.drop_cart__menu_link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid #ededed;
@@ -490,9 +499,25 @@ a {
   transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
-.drop_cart__menu_link:hover {
+.drop_cart__menu_list:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+}
+
+.drop_cart__menu_list_last {
+  list-style: none;
+}
+
+.drop_cart__menu_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .drop_cart__text {
@@ -501,7 +526,6 @@ a {
 }
 
 .drop_cart__h3 {
-  margin-top: 10px;
   font-size: 12px;
   font-weight: bold;
   color: #222222;
@@ -548,7 +572,7 @@ a {
 
 .drop_cart__button {
   margin: 11px auto 0;
-  width: 250px;
+  width: 225px;
   height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1259,7 +1283,7 @@ a {
 
 .product__add {
   color: #ffffff;
-  background-color: Transparent;
+  background: transparent;
   font-size: 13px;
   font-weight: 700;
   width: 123px;
@@ -1280,10 +1304,6 @@ a {
 .product__add:hover {
   -webkit-box-shadow: 0 0 5px #fff;
           box-shadow: 0 0 5px #fff;
-}
-
-.product__add:focus {
-  outline: none;
 }
 
 .product__content {
