@@ -5,6 +5,9 @@ let cart = {
 
     products: [],
 
+    run() {
+        this.addButtonListener();
+    },
 
     render() {
 
@@ -21,16 +24,11 @@ let cart = {
             let row = `
             <li class="drop_cart__menu_list">
             <a class="drop_cart__menu_link" href="single_page.html">
-                <img class="small_img" src="${elem.img}" alt="image">
+                <img class="small_img" src="${elem.img}" alt="image" title="id: ${elem.id}">
                 <div class="drop_cart__text">
                     <h3 class="drop_cart__h3">${elem.name}</h3>
-                    <div class="rating">
-                        ${elem.rating}
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <i class="far fa-star"></i>
+                    <div class="rating" title="Item rating: ${elem.rating}">
+                    ${cart.ratingRender(elem.rating)}
                     </div>
 
                     <p class="drop_cart__p">${elem.count} x ${elem.price}$</p>
@@ -45,6 +43,31 @@ let cart = {
         });
     },
 
+    ratingRender(rating) {
+
+        Number(rating);
+        let integer = Math.floor(rating);
+        let decimal = rating % 1;
+        let emptyStars = Math.round(4.99 - integer - decimal);
+
+        let str = '';
+
+        for (let i = 0; i < integer; i++) {
+            str += '<i class="fas fa-star"></i>';
+        }
+
+        if (decimal >= 0.5) {
+            str += '<i class="fas fa-star-half-alt"></i>'
+        }
+
+        
+        for (let i = 0; i < emptyStars; i++) {
+            str += '<i class="far fa-star"></i>';
+        }
+
+        return str;
+    },
+
 
     sum() {
 
@@ -53,10 +76,6 @@ let cart = {
             sum += this.products[key].price * this.products[key].count;
         }
         return sum;
-    },
-
-    run() {
-        cart.addButtonListener();
     },
 
 
@@ -86,19 +105,6 @@ let cart = {
         });
     },
 
-    add(id, product) {
-        if (this.products[id] !== undefined) {
-            this.products[id].count++;
-        } else {
-            this.products[id] = product;
-        }
-        cart.sum();
-        cart.render();
-        cart.addRemoveListener();
-
-    },
-
-
     addRemoveListener() {
 
         let deleteButton = document.querySelectorAll('.fa-times-circle');
@@ -110,24 +116,36 @@ let cart = {
 
                 let id = Number(this.textContent);
                 cart.remove(id);
-
             });
         });
 
     },
 
+    add(id, product) {
+        if (this.products[id] !== undefined) {
+            this.products[id].count++;
+        } else {
+            this.products[id] = product;
+        }
+        this.sum();
+        this.render();
+        this.addRemoveListener();
+
+    },
+
+
     remove(id) {
         if (cart.products[id].count == 1) {
             delete cart.products[id];
-            cart.render();
-            cart.insertEmpty();
+            this.render();
+            this.insertEmpty();
 
         } else {
-            cart.products[id].count--;
-            cart.render();
+            this.products[id].count--;
+            this.render();
         }
 
-        cart.addRemoveListener();
+        this.addRemoveListener();
     },
 
 
@@ -135,7 +153,7 @@ let cart = {
         let menu = document.querySelector('.drop_cart__menu').children;
         if (menu.length == 1) {
             menu[0].insertAdjacentHTML("afterbegin", `<li class="empty">Empty</li>`);
-        }        
+        }
     },
 }
 

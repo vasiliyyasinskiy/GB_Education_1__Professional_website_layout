@@ -62,56 +62,70 @@
             </div>
             <div class="header__right">
 
+                <!-- <ul class="menu_cart">
+                    <li class="menu_cart__list"><a href="shopping_cart.html" class="menu_cart__link"><img class="cart"
+                                src="img/cart.svg" alt="cart"></a>
+                        <div class="drop_cart drop">
+                            <div class="drop__flex">
+
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Pcs</th>
+                                            <th scope="col">x</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="5"><span class="empty">Empty</span></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th colspan="2" scope="row">Total:</th>
+                                            <td colspan="3">
+                                                <span class="total">0</span>
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+
+
+                                <a class="drop_cart__button" href="checkout.html">Checkout</a>
+                                <a class="drop_cart__button" href="shopping_cart.html">Go to cart</a>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul> -->
+
                 <ul class="menu_cart">
                     <li class="menu_cart__list"><a href="shopping_cart.html" class="menu_cart__link"><img class="cart"
                                 src="img/cart.svg" alt="cart"></a>
                         <div class="drop_cart drop">
                             <div class="drop__flex">
+
+
                                 <ul class="drop_cart__menu">
-                                    <li class="drop_cart__menu_list">
-                                        <a class="drop_cart__menu_link" href="single_page.html">
-                                            <img src="img/layer-45.jpg" alt="image">
-                                            <div class="drop_cart__text">
-                                                <h3 class="drop_cart__h3">Rebox Zane</h3>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="far fa-star"></i>
-
-                                                <p class="drop_cart__p">1 x $250</p>
-                                            </div>
-                                            <i class="fas fa-times-circle"></i>
-                                        </a>
-                                    </li>
-
-                                    <li class="drop_cart__menu_list">
-                                        <a class="drop_cart__menu_link" href="single_page.html">
-                                            <img src="img/layer-44.jpg" alt="image">
-                                            <div class="drop_cart__text">
-                                                <h3 class="drop_cart__h3">Rebox Zane</h3>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="far fa-star"></i>
-
-                                                <p class="drop_cart__p">1 x $250</p>
-                                            </div>
-                                            <i class="fas fa-times-circle"></i>
-                                        </a>
-                                    </li>
-                                    <li class="drop_cart__menu_list">
-                                        <p class="drop_cart_total__p"><span>TOTAL</span><span>$500.00</span></p>
+                                    <li class="empty">Empty</li>
+                                    <li class="drop_cart__menu_list_last">
+                                        <p class="drop_cart_total__p"><span>TOTAL</span><span>$0</span></p>
 
                                         <a class="drop_cart__button" href="checkout.html">Checkout</a>
                                         <a class="drop_cart__button" href="shopping_cart.html">Go to cart</a>
                                     </li>
                                 </ul>
+
+
                             </div>
                         </div>
                     </li>
                 </ul>
+
 
                 <a class="button__my_account__link" href="#">My Account &#9660;</a>
             </div>
@@ -506,7 +520,9 @@
                                 <a class="product__name">Mango People T-shirt</a>
                                 <p class="product__price">$52.00</p>
                             </div>
-                            <a href="#" class="product__add">Add to Cart</a>
+                            <button class="product__add btn btn-success mt-3 toBasketBtn" type="button" data-id="9"
+                                data-price="52" data-name="Mango People T-shirt" data-rating="1"
+                                data-img="img/e_layer_43_2267.jpg">Add to Cart</button>
                         </div>
 
                         <div class="product">
@@ -517,7 +533,9 @@
                                 <a class="product__name">Mango People T-shirt</a>
                                 <p class="product__price">$52.00</p>
                             </div>
-                            <a href="#" class="product__add">Add to Cart</a>
+                            <button class="product__add btn btn-success mt-3 toBasketBtn" type="button" data-id="10"
+                                data-price="52" data-name="Mango People T-shirt" data-rating="0.4"
+                                data-img="img/e_layer_44_2268.jpg">Add to Cart</button>
                         </div>
 
 
@@ -529,7 +547,9 @@
                                 <a class="product__name">Mango People T-shirt</a>
                                 <p class="product__price">$52.00</p>
                             </div>
-                            <a href="#" class="product__add">Add to Cart</a>
+                            <button class="product__add btn btn-success mt-3 toBasketBtn" type="button" data-id="11"
+                                data-price="52" data-name="Mango People T-shirt" data-rating="1.7"
+                                data-img="img/layer-3.jpg">Add to Cart</button>
                         </div>
 
                         <div class="product">
@@ -540,7 +560,9 @@
                                 <a class="product__name">Mango People T-shirt</a>
                                 <p class="product__price">$52.00</p>
                             </div>
-                            <a href="#" class="product__add">Add to Cart</a>
+                            <button class="product__add btn btn-success mt-3 toBasketBtn" type="button" data-id="12"
+                                data-price="52" data-name="Mango People T-shirt" data-rating="3.2"
+                                data-img="img/e_layer_44_2269.jpg">Add to Cart</button>
                         </div>
 
                         <div class="product">
@@ -551,7 +573,9 @@
                                 <a class="product__name">Mango People T-shirt</a>
                                 <p class="product__price">$52.00</p>
                             </div>
-                            <a href="#" class="product__add">Add to Cart</a>
+                            <button class="product__add btn btn-success mt-3 toBasketBtn" type="button" data-id="13"
+                                data-price="52" data-name="Mango People T-shirt" data-rating="5"
+                                data-img="img/layer-8.jpg">Add to Cart</button>
                         </div>
 
                         <div class="product">
@@ -562,7 +586,9 @@
                                 <a class="product__name">Mango People T-shirt</a>
                                 <p class="product__price">$52.00</p>
                             </div>
-                            <a href="#" class="product__add">Add to Cart</a>
+                            <button class="product__add btn btn-success mt-3 toBasketBtn" type="button" data-id="14"
+                                data-price="52" data-name="Mango People T-shirt" data-rating="4.7"
+                                data-img="img/e_layer_44_2271.jpg">Add to Cart</button>
                         </div>
 
                         <div class="product">
@@ -573,7 +599,9 @@
                                 <a class="product__name">Mango People T-shirt</a>
                                 <p class="product__price">$52.00</p>
                             </div>
-                            <a href="#" class="product__add">Add to Cart</a>
+                            <button class="product__add btn btn-success mt-3 toBasketBtn" type="button" data-id="15"
+                                data-price="52" data-name="Mango People T-shirt" data-rating="1.1"
+                                data-img="img/layer-6.jpg">Add to Cart</button>
                         </div>
 
                         <div class="product">
@@ -584,7 +612,9 @@
                                 <a class="product__name">Mango People T-shirt</a>
                                 <p class="product__price">$52.00</p>
                             </div>
-                            <a href="#" class="product__add">Add to Cart</a>
+                            <button class="product__add btn btn-success mt-3 toBasketBtn" type="button" data-id="16"
+                                data-price="52" data-name="Mango People T-shirt" data-rating="3.9"
+                                data-img="img/e_layer_49_2274.jpg">Add to Cart</button>
                         </div>
 
                         <div class="product">
@@ -595,7 +625,9 @@
                                 <a class="product__name">Mango People T-shirt</a>
                                 <p class="product__price">$52.00</p>
                             </div>
-                            <a href="#" class="product__add">Add to Cart</a>
+                            <button class="product__add btn btn-success mt-3 toBasketBtn" type="button" data-id="17"
+                                data-price="52" data-name="Mango People T-shirt" data-rating="4.10"
+                                data-img="img/e_layer_44_2270.jpg">Add to Cart</button>
                         </div>
 
 
@@ -768,6 +800,8 @@
         </div>
 
     </footer>
+
+    <script src="scripts/cart.js"></script>
 
 </body>
 
